@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-4 py-xl-5">
+  <div class="row mb-5">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+          <h2 class="fs-3 text-success fw-bold">Identified Plant Diseases and Disease Details</h2>
+      </div>
+  </div>
+  <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+      <div class="col mx-auto">
+          <div><img class="rounded img-fluid d-block card-img-top"  src="{{data.image}}">
+              <div class="py-4">
+                  <h4>Disease Detection :</h4>
+                  <h4><span style="color: rgb(249, 6, 6);">{{data.prediction}}</span></h4>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container d-flex flex-column align-items-center">
+  <div class="row gy-4" style="width: 100%;">
+      <div class="col-12">
+        <h3 class="text-success fw-bold ">Brief Description</h3>
+        <p class="fw-medium fs-5" style="text-align: justify;">{{data.discrption}}</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <br>
+        <h2 class="text-success fw-bold">Prevent This Plant Disease By Following Below Steps :</h2>
+        <p class="fw-medium fs-5 mt-4" style="text-align: justify;">{{data.possible_step}}</p>
+      </div>
+      <br>
+  </div>
+</div>
+
+
+
+{% endblock %}
