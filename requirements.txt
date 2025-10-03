@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 asgiref==3.7.2
 beautifulsoup4==4.12.2
 blinker==1.6.2
